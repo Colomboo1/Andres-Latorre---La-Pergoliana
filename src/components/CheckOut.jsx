@@ -27,7 +27,7 @@ const CheckOut = () => {
             )}
             </div>
             <h1>TOTAL: <span>$</span>{totalPrice}</h1>
-            <a href="https://www.mercadolibre.com.ar/">finalizar compra</a>
+            <Link to="/formofbuy">finalizar compra</Link>
         </>
         ) : (
         <>

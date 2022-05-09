@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import AboutUs from './pages/AboutUs';
 import Home from "./pages/Home"
 import CheckOut from './components/CheckOut';
+import FormOfBuy from './pages/FormOfBuy';
 
 export default function App() {
   return (
@@ -42,6 +43,8 @@ export default function App() {
         <Route path="/products" element={<ListProducts />} />
         {/*cartview */}
         <Route path="/checkout" element={<CheckOut />} />
+        {/*formulario de compra */}
+        <Route path="/formofbuy" element={<FormOfBuy />} />
       </Routes>
     </BrowserRouter>
   );
