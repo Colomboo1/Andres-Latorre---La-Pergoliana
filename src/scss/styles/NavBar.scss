@@ -1,0 +1,30 @@
+@import "../common/vars.scss";
+
+.logo-navbar{   
+  display: flex;
+  background-color: $primary-color;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 32px;
+ 
+  .isologo{
+    height: 100px;
+  }
+
+  .menu{
+    background: none;
+    display: flex;
+    align-items: center;
+
+    a{
+      text-decoration: none;
+      color: #ffffff;
+      margin-left: 16px;
+
+
+      svg{
+        fill: #ffffff;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+//para hacer un mini zooom usar transform
+
+.item {
+  min-width: 200px;
+  padding: 15px;
+  margin: 10px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 7px 6px 12px -1px rgb(72 72 72 / 77%);
+  -webkit-box-shadow: 7px 6px 12px -1px rgb(72 72 72 / 77%);
+  -moz-box-shadow: 7px 6px 12px -1px rgba(72, 72, 72, 0.77);
+  
+  a {
+    color: black;   
+    font-weight: 500;
+  }
+  .item_card {
+    display: flex;
+    flex-direction: column;
+    
+    .small-img {
+      border-radius: 5px;
+      height: 200px;
+      margin: 5px;
+      transition: transform 200ms ease;
+      &:hover{
+        transform: scale(1.1);
+      }
+
+
+    }
+  }
+}

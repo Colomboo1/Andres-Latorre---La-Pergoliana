@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+* {
+  font-family: 'PT Sans', sans-serif;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+
+ 
+}
+
+body {
+  background-image: url("https://mcdn.wallpapersafari.com/medium/88/78/c2feMw.jpg");
+}
+
+
+
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  gap: 10px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  justify-content: space-around;
+}
+
+
+.stock{
+  display: flex;
+  margin: 10px;
+}
+
+

@@ -1,0 +1,20 @@
+
+.detail-row{
+    display: flex;
+    padding: 50px;
+
+    .detail-img{
+        width: 400px;
+        border-radius: 5px;
+
+        
+    }
+    .detail-data{
+        padding: 10px;
+        display: block;
+        h2{
+            text-align: center;
+            margin-bottom: 24px;
+        }
+    }
+}
