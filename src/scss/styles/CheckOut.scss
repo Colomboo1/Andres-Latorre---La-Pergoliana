@@ -1,10 +1,28 @@
-article{
-    display: flex;
+@import "../common/vars.scss";
 
-    .container-data{
-        display: block;
+.item-check-out{
+    
+    article{
+        display: flex;
+        justify-content: space-around;
+        padding: 32px;
     }
+        
+        .container-data{
+            display: block;
+            border-bottom-width: 1px solid #000;
+        }
+        .cart-img{
+            height:200px;
+        }
+    
 }
-img{
-    height:200px;
-}
+.btn-finally{
+    text-align: center;
+    border-radius: 5px;
+    display: block;
+    padding: 16px;
+    background: $quaternary-color;
+    }
+
+

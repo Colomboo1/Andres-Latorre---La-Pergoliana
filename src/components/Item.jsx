@@ -1,5 +1,4 @@
 import React from 'react';
-
 import "../scss/styles/Item.scss"
 import { Link } from 'react-router-dom';
 

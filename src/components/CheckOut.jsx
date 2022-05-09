@@ -1,7 +1,7 @@
 import React, {useContext } from 'react';
 import { Link } from 'react-router-dom';
 import {cartProductListContext,cartMetaDataContext}  from '../context/StoreProvider';
-import "../scss/styles/ItemCount.scss"
+import "../scss/styles/CheckOut.scss"
 
 const CheckOut = () => {
   // traemos los datos del context
@@ -14,10 +14,10 @@ const CheckOut = () => {
         totalQuantity > 0 ? (
         <>
             <h1>ITEMS</h1>
-            <div>
+            <div className='item-check-out'>
             {cartArray.map((item) => (
                 <article key={item.id}>
-                    <img src={item.image} alt={item.name}  />
+                    <img className='cart-img' src={item.image} alt={item.name}  />
                     <div className='container-data'>
                         <h2>{item.name}</h2>
                         <p>Precio individual: <span>$</span>{item.price}</p>
@@ -29,8 +29,8 @@ const CheckOut = () => {
                 )
             )}
             </div>
-            <h1>TOTAL: <span>$</span>{totalPrice}</h1>
-            <Link to="/formofbuy">finalizar compra</Link>
+            <h2>TOTAL: <span>$</span>{totalPrice}</h2>
+            <Link className='btn-finally' to="/formofbuy">finalizar compra</Link>
         </>
         ) : (
         <>

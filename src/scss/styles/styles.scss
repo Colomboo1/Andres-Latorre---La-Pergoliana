@@ -18,6 +18,13 @@ h2 {
   text-align: center;
 }
 
+button{
+  border-radius: 5px;
+  display: block;
+  padding: 16px;
+  background: $quaternary-color;
+}
+
 a {
   font-family: "PT Sans";
   text-decoration: none;
