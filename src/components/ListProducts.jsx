@@ -6,7 +6,7 @@ import Item from './Item'
 import "../scss/styles/ListProduct.scss"
 
 
-const ListProducts = ({children, getPromos}) => {
+const ListProducts = ({getPromos}) => {
     const [loading , setLoading] = useState(true)
 
     const { category } = useParams()
@@ -56,7 +56,7 @@ const ListProducts = ({children, getPromos}) => {
     return(
         <div>
             <h2>{category}</h2>
-            {loading && <div className='container-progress'>CARGANDO</div>}
+            {loading && <div className="spinner"></div>}
             <div className='container-items'>
                 {products.map(( product ) => 
                     <Item 

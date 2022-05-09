@@ -1,9 +1,5 @@
 import React from 'react';
 import ListProducts from '../components/ListProducts';
-import { Navigate } from 'react-router-dom';
-
-import Logo from "../assets/images/Logo.png"
-
 
 
 const Home = () =>{
@@ -12,14 +8,14 @@ const Home = () =>{
             <h1>La pergoliana</h1>
             <h2>Batas y Kimonos confección artesanal diseñada para cuerpos reales</h2>
             <div className="container-logo">
-                <img src={Logo} alt="" className="logo"/>
+                <img src="../assets/images/Logo.png" alt="piruchacon con flores" className="logo"/>
+                <span>Una prenda que elegirías como piel...</span>
             </div>
-            <span>Una prenda que elegirías como piel...</span>
+            <span>Productos con descuento</span>
             <ListProducts getPromos={true} />     
         </div>
     
     );
 };
-  
-  
+   
 export default Home;

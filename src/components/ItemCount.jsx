@@ -23,12 +23,12 @@ const ItemCount = ({id, stock, price, name, image}) => {
   return (
     <div className="quantity">
       <div className="stock">
-        <button className="btn-rem" onClick={remStock} disabled={ quantity === 0} ><GoDiffRemoved size="3em"/></button>
+        <button className="btn" onClick={remStock} disabled={ quantity === 0} ><GoDiffRemoved size="3em"/></button>
         <div>
           <p>cantidad: {quantity}</p>
-          <button className="btn-buy" onClick={() => addToCard({id, price, name, image,quantity})} disabled={ stock === 0 || quantity  === 0 } >agregar al carrito</button>
+          <button className="btn-add" onClick={() => addToCard({id, price, name, image,quantity})} disabled={ stock === 0 || quantity  === 0 } >agregar al carrito</button>
         </div>
-        <button className="btn-add" onClick={addstock} disabled={ quantity === stock }><GoDiffAdded size="3em"/></button>
+        <button className="btn" onClick={addstock} disabled={ quantity === stock }><GoDiffAdded size="3em"/></button>
       </div>
     </div>  
   );

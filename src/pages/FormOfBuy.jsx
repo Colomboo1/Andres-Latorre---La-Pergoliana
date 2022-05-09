@@ -2,15 +2,17 @@ import {useState, useContext} from 'react'
 import {cartProductListContext,cartMetaDataContext}  from '../context/StoreProvider';
 import { addDoc, collection } from 'firebase/firestore';
 import db from '../firebase/Firebase'
+import "../scss/styles/FormOfBuy.scss"
 
 
 const FormOfBuy = () => {
     const [cartArray] = useContext(cartProductListContext)
     const [{ totalPrice}] = useContext(cartMetaDataContext);
     const [formData, setFormData] = useState({
-        name: '',
-        phone: '',  
-        email: '',
+        name: "",
+        phone: "",
+        direction: "",  
+        email: "",
     })
     const [order, setOrder] = useState(
         {
@@ -52,7 +54,7 @@ const FormOfBuy = () => {
     }
 
     return(
-        <div className='container-general'> 
+        <div className='conteiner-general'> 
             {successOrder ? (
                 <div className='order-submmit'>
                     <h3>Orden generada correctamente</h3>
@@ -70,13 +72,16 @@ const FormOfBuy = () => {
                             onChange={handleChange} 
                             value={formData.phone}
                         />
-                        <input type="mail" name='email' placeholder='mail' 
+                        <input type="text" name='direction' placeholder='direccion' 
+                            onChange={handleChange} 
+                            value={formData.direction}
+                        />
+                         <input type="mail" name='email' placeholder='mail' 
                             onChange={handleChange} 
                             value={formData.email}
                         />
-
-                        <button type="submit">Comprar</button>
                     </form>
+                    <button type="submit">Comprar</button>
                 </div>
             )}
     

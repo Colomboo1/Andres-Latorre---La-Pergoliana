@@ -1,0 +1,31 @@
+@import "../common/vars.scss";
+
+.conteiner-general {
+    padding: 32px;
+}
+.form-content {
+    text-align: center;
+    display: block;
+}
+
+    h2 {
+        margin-bottom: 32px;
+    }
+
+    form {
+        display: inline-grid;
+    
+        input {
+            border: none;
+            background: $quaternary-color;
+            margin: 10px;
+            padding: 8px;
+        }
+    }
+    button {
+        display: block;
+        padding: 16px;
+        background: $quaternary-color;
+    }
+    
+

@@ -1,6 +1,7 @@
 import React, {useContext } from 'react';
 import { Link } from 'react-router-dom';
 import {cartProductListContext,cartMetaDataContext}  from '../context/StoreProvider';
+import "../scss/styles/ItemCount.scss"
 
 const CheckOut = () => {
   // traemos los datos del context
@@ -16,12 +17,14 @@ const CheckOut = () => {
             <div>
             {cartArray.map((item) => (
                 <article key={item.id}>
-                    <h2>{item.name}</h2>
-                    <img src={item.image} alt={item.name} height="100px" />
-                    <p>Precio individual: <span>$</span>{item.price}</p>
-                    <p>Cantidad: {item.quantity} items</p>
-                    <p>Subtotal: <span>$</span>{item.quantity*item.price}</p>
-                    <button onClick={() => removeFromCart(item.id)}>ELIMINAR ITEM</button>
+                    <img src={item.image} alt={item.name}  />
+                    <div className='container-data'>
+                        <h2>{item.name}</h2>
+                        <p>Precio individual: <span>$</span>{item.price}</p>
+                        <p>Cantidad: {item.quantity} items</p>
+                        <p>Subtotal: <span>$</span>{item.quantity*item.price}</p>
+                        <button onClick={() => removeFromCart(item.id)}>ELIMINAR ITEM</button>
+                    </div>
                 </article>
                 )
             )}

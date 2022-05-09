@@ -1,8 +1,26 @@
+@import "../common/vars.scss";
+
 .stock{
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 15px;
-  
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 16px;
+  background: $quaternary-color;
+  border-radius: 6px;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+
+  button.btn-add {
+    background: burlywood;
+    border: none;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
   }
+
+  .btn {
+    margin: 5px;
+    border: none;
+    background: none;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+
+  }
+}
   
