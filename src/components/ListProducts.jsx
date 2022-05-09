@@ -55,7 +55,7 @@ const ListProducts = ({children, getPromos}) => {
 
     return(
         <div>
-            <h2> Productos </h2>
+            <h2>{category}</h2>
             {loading && <div className='container-progress'>CARGANDO</div>}
             <div className='container-items'>
                 {products.map(( product ) => 
