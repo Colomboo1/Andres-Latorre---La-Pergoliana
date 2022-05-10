@@ -7,12 +7,9 @@ import "../scss/styles/ListProduct.scss"
 
 
 const ListProducts = ({getPromos}) => {
-    const [loading , setLoading] = useState(true)
-
-    const { category } = useParams()
-
-    const [products, setProducts] = useState([])
-
+    const [loading , setLoading] = useState(true);
+    const { category } = useParams();
+    const [products, setProducts] = useState([]);
     const getProducts = async () => {
         try{
             const itemsCollection = collection(db, 'productos');
@@ -30,8 +27,8 @@ const ListProducts = ({getPromos}) => {
     } 
 
     useEffect( () => {
-        setProducts([])
-        setLoading(true)
+        setProducts([]);
+        setLoading(true);
         getProducts().then( (productos) => {
             setLoading(false);
             if(category){
@@ -39,7 +36,7 @@ const ListProducts = ({getPromos}) => {
             }else if(getPromos){
                 filterProductByCategory(productos, "promo");
             }else{
-                setProducts(productos)
+                setProducts(productos);
             }
         })
     }, [category])

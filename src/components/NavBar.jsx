@@ -1,16 +1,11 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-
 import Cart from './Cart';
-
 import '../scss/styles/NavBar.scss';
-
-import iconMenu from "../assets/images/icon menu.svg"
 import isoLogo from "../assets/images/isoLogo.svg"
 
 
 //carga de navbar de manera dinamica
-
 const NavBar = () => {
     const categories = [
         { id: '1000', address: '/products', text: 'Productos' },

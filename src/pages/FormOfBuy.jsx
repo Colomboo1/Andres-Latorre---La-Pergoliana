@@ -6,12 +6,11 @@ import "../scss/styles/FormOfBuy.scss"
 
 
 const FormOfBuy = () => {
-    const [cartArray] = useContext(cartProductListContext)
+    const [cartArray] = useContext(cartProductListContext);
     const [{ totalPrice}] = useContext(cartMetaDataContext);
     const [formData, setFormData] = useState({
         name: "",
-        phone: "",
-        direction: "",  
+        phone: "",  
         email: "",
     })
     const [order, setOrder] = useState(
@@ -72,16 +71,12 @@ const FormOfBuy = () => {
                             onChange={handleChange} 
                             value={formData.phone}
                         />
-                        <input type="text" name='direction' placeholder='direccion' 
-                            onChange={handleChange} 
-                            value={formData.direction}
-                        />
                          <input type="mail" name='email' placeholder='mail' 
                             onChange={handleChange} 
                             value={formData.email}
                         />
-                    </form>
                     <button type="submit">Comprar</button>
+                    </form>
                 </div>
             )}
     

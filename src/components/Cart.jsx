@@ -1,10 +1,7 @@
 import '../scss/styles/Cart.scss';
-
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { cartMetaDataContext } from '../context/StoreProvider';
-
-import { ReactComponent as IconCart } from '../assets/images/iconcart.svg';
 
 const Cart = () => {
   // traemos las unidades para mostrarlas al lado de nuestro carrito

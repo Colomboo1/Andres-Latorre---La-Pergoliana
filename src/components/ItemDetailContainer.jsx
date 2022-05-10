@@ -6,42 +6,37 @@ import ItemDetail  from './ItemDetail';
 import { Link } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
-  const [product, setProduct] = useState({});
-  const [loading, setLoading] = useState(true);
-
-  const { itemId } = useParams();
-
-  const getProduct = async () =>{
-    const docRef = doc(db, "productos", itemId);
-    const docSnap = await getDoc(docRef);
-
-    if (docSnap.exists()) {
-      console.log("Document data:", docSnap.data());
-      let product = docSnap.data();
-      product.id = docSnap.id;
-      setProduct(product);
-      setLoading(false);
-    } else {
-      // doc.data() will be undefined in this case
-      console.log("No recupero nada");
+    const [product, setProduct] = useState({});
+    const [loading, setLoading] = useState(true);
+    const { itemId } = useParams();
+    const getProduct = async () =>{
+        const docRef = doc(db, "productos", itemId);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+            let product = docSnap.data();
+            product.id = docSnap.id;
+            setProduct(product);
+            setLoading(false);
+        } else {
+            alert("No recupero nada");
+        }
     }
-  }
 
 
-  useEffect(() => {
-    setLoading(true);
-    getProduct();
-  },[]);
+    useEffect(() => {
+        setLoading(true);
+        getProduct();
+    },[]);
 
-  return (
-    <div>
-      <Link to={`/`}>volver</Link>
-      {loading && <div className="spinner"></div>}
-      <div className='container-items'>
-        <ItemDetail {...product} />
-      </div>
-    </div>
-  );
+    return (
+        <div>
+        <Link to={`/`}>volver</Link>
+        {loading && <div className="spinner"></div>}
+        <div className='container-items'>
+            <ItemDetail {...product} />
+        </div>
+        </div>
+    );
 };
 
 export default ItemDetailContainer;

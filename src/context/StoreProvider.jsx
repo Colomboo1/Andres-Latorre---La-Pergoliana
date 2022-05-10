@@ -12,15 +12,18 @@ const cartProductListContext = createContext(cartProductList);
 const cartMetaDataContext = createContext(cartMetaData);
 
 const StoreProvider = ({ children }) => {
-    const [ cartArray, setCartArray ] = useState(cartProductList);// es un array
-    const [ cartMeta, setCartMeta ] = useState(cartMetaData);//es un objeto
+    // es un array
+    const [ cartArray, setCartArray ] = useState(cartProductList);
+    //es un objeto
+    const [ cartMeta, setCartMeta ] = useState(cartMetaData);
     const newArray = [...cartArray];
 
     const addToCard = (product) =>{
         const index = cartArray.findIndex(el => el.id === product.id);  
+        //si esta dentro del array
         if (index >= 0){
-            //si esta dentro del array
-            newArray[index] = product;//modificar
+            //modificar
+            newArray[index] = product;
         }else{
             //si es producto nuevo
             newArray.push(product);

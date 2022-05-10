@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import "../scss/styles/AboutUs.scss"
 
-
 const AboutUs = () =>{
 
     return (
