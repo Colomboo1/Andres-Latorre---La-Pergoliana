@@ -1,17 +1,17 @@
 import React from 'react';
 import ListProducts from '../components/ListProducts';
-
+import "../scss/styles/Home.scss"
 
 const Home = () =>{
     return (
-        <div className="home-container "> 
+        <div className="home-container"> 
             <h1>La pergoliana</h1>
             <h2>Batas y Kimonos confección artesanal diseñada para cuerpos reales</h2>
-            <div className="container-logo">
-                <img src="../assets/images/Logo.png" alt="piruchacon con flores" className="logo"/>
+            <div className="conteiner-logo">
+                <img src={"https://drive.google.com/uc?export=view&id=18rROXB3Kkn4cZFTrvmSD6c7WHu2fp3gE" }alt="piruchacon con flores" className='pirucha'/>
                 <span>Una prenda que elegirías como piel...</span>
             </div>
-            <span>Productos con descuento</span>
+            <h2>Productos con descuento</h2>
             <ListProducts getPromos={true} />     
         </div>
     
